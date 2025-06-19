@@ -4,32 +4,129 @@
         <title>Quiz e futebol</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
         <link rel="stylesheet" href="estilo.css">
     </head>
     <body>
-        <div id="container">
+        <div id="container" class="container">
             <h1>Bem-vindo(a) ao quiz de futebol!</h1>
-            <p>O quiz terá 20 perguntas, cada resposta certa vale 1 ponto!</p>
-            <button id="begin" onclick="comecar()">Começar o quiz</button>
+            <p>O quiz terá 10 perguntas, cada resposta certa vale 1 ponto!</p>
+            <button id="begin" class="btn btn-dark" onclick="comecar()">Começar o quiz</button>
 
             <div id="quiz">
                 <div class="pergunta">
                     <h3>1</h3>
-                    <p>Teste</p>
+                    <p>Qual país venceu a Copa do Mundo de 2002?</p>
                     <ul>
-                        <li><button>a</button></li>
-                        <li><button>b</button></li>
-                        <li><button>c</button></li>
-                        <li><button>d</button></li>
+                        <li><button onclick="incorretoa1()" id="a1">Alemanha</button></li>
+                        <li><button onclick="incorretob1()" id="b1">Argentina</button></li>
+                        <li><button onclick="corretoc1()" id="c1">Brasil</button></li>
+                        <li><button onclick="incorretod1()" id="d1">Itália</button></li>
                     </ul>
                 </div>
+                <div class="pergunta">
+                    <h3>2</h3>
+                    <p>Quantos jogadores compõem um time de vôlei em quadra?</p>
+                    <ul>
+                        <li><button onclick="incorretoa2()" id="a2">5</button></li>
+                        <li><button onclick="corretob2()" id="b2">6</button></li>
+                        <li><button onclick="incorretoc2()" id="c2">7</button></li>
+                        <li><button onclick="incorretod2()" id="d2">8</button></li>
+                    </ul>
+                </div>
+
+                <div class="pergunta">
+                    <h3>3</h3>
+                    <p>Quem é considerado o maior nadador olímpico da história?</p>
+                    <ul>
+                        <li><button onclick="incorretoa3()" id="a3">Cesar Cielo</button></li>
+                        <li><button onclick="corretob3()" id="b3">Michael Phelps</button></li>
+                        <li><button onclick="incorretoc3()" id="c3">Ryan Lochte</button></li>
+                        <li><button onclick="incorretod3()" id="d3">Ian Thorpe</button></li>
+                    </ul>
+                </div>
+
+                <div class="pergunta">
+                    <h3>4</h3>
+                    <p>Em qual esporte Ayrton Senna se destacou?</p>
+                    <ul>
+                        <li><button onclick="incorretoa4()" id="a4">Motocross</button></li>
+                        <li><button onclick="incorretob4()" id="b4">Rally</button></li>
+                        <li><button onclick="corretoc4()" id="c4">Fórmula 1</button></li>
+                        <li><button onclick="incorretod4()" id="d4">Kart</button></li>
+                    </ul>
+                </div>
+
+                <div class="pergunta">
+                    <h3>5</h3>
+                    <p>Quantos sets são necessários para vencer uma partida de tênis masculina em Grand Slams?</p>
+                    <ul>
+                        <li><button onclick="incorretoa5()" id="a5">2</button></li>
+                        <li><button onclick="corretob5()" id="b5">3</button></li>
+                        <li><button onclick="incorretoc5()" id="c5">4</button></li>
+                        <li><button onclick="incorretod5()" id="d5">5</button></li>
+                    </ul>
+                </div>
+
+                <div class="pergunta">
+                    <h3>6</h3>
+                    <p>Qual é o time com mais títulos da Libertadores até 2024?</p>
+                    <ul>
+                        <li><button onclick="incorretoa6()" id="a6">São Paulo</button></li>
+                        <li><button onclick="corretob6()" id="b6">Independiente</button></li>
+                        <li><button onclick="incorretoc6()" id="c6">Boca Juniors</button></li>
+                        <li><button onclick="incorretod6()" id="d6">River Plate</button></li>
+                    </ul>
+                </div>
+
+                <div class="pergunta">
+                    <h3>7</h3>
+                    <p>Qual desses atletas é um famoso jogador de basquete?</p>
+                    <ul>
+                        <li><button onclick="incorretoa7()" id="a7">Lionel Messi</button></li>
+                        <li><button onclick="corretob7()" id="b7">LeBron James</button></li>
+                        <li><button onclick="incorretoc7()" id="c7">Cristiano Ronaldo</button></li>
+                        <li><button onclick="incorretod7()" id="d7">Novak Djokovic</button></li>
+                    </ul>
+                </div>
+
+                <div class="pergunta">
+                    <h3>8</h3>
+                    <p>Em que país foram realizados os Jogos Olímpicos de 2016?</p>
+                    <ul>
+                        <li><button onclick="incorretoa8()" id="a8">China</button></li>
+                        <li><button onclick="incorretob8()" id="b8">Inglaterra</button></li>
+                        <li><button onclick="corretoc8()" id="c8">Brasil</button></li>
+                        <li><button onclick="incorretod8()" id="d8">Japão</button></li>
+                    </ul>
+                </div>
+
+                <div class="pergunta">
+                    <h3>9</h3>
+                    <p>Qual é o nome da competição de ciclismo mais famosa do mundo?</p>
+                    <ul>
+                        <li><button onclick="incorretoa9()" id="a9">Giro d'Italia</button></li>
+                        <li><button onclick="incorretob9()" id="b9">Volta da Espanha</button></li>
+                        <li><button onclick="corretoc9()" id="c9">Tour de France</button></li>
+                        <li><button onclick="incorretod9()" id="d9">Copa do Mundo de Ciclismo</button></li>
+                    </ul>
+                </div>
+
+                <div class="pergunta">
+                    <h3>10</h3>
+                    <p>Em qual posição joga um goleiro no futebol?</p>
+                    <ul>
+                        <li><button onclick="incorretoa10()" id="a10">Ataque</button></li>
+                        <li><button onclick="incorretob10()" id="b10">Meio-campo</button></li>
+                        <li><button onclick="incorretoc10()" id="c10">Lateral</button></li>
+                        <li><button onclick="corretod10()" id="d10">Defesa</button></li>
+                    </ul>
+                </div>
+                <input type="submit" onclick="finalizar()" class="btn btn-success" id="finish_button" value="Finalizar">
+                <div id="resultado" class="alert alert-primary"></div>
             </div>
         </div>
 
-        <script>
-            const comecar_button = document.getElementById("begin");
-
-            
-        </script>
+        <script src="index.js"></script>
     </body>
 </html>
